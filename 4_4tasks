@@ -1,0 +1,43 @@
+let calculator = {
+    read(){
+        this.value1 = prompt('number1','number1')
+        this.value2 = prompt('number2','number2')
+        return
+    },
+    sum(){
+        return +this.value1+ +this.value2
+    },
+    mul(){
+        return this.value1*this.value2
+
+    }
+    
+};
+calculator.read()
+
+for (let key in calculator){
+    console.log(key)
+    console.log(calculator[key])
+}
+
+alert(calculator)
+
+
+
+let ladder = {
+    step: 0,
+    up() {
+      this.step++;
+      return this
+    },
+    down() {
+      this.step--;
+      return this
+    },
+    showStep: function() { // shows the current step
+      alert( this.step );
+      return this
+    }
+  };
+
+  ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
