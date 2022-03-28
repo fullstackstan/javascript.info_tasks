@@ -58,11 +58,11 @@ alert(sum)
 // If salaries is empty, then the result must be 0.
 
 
-Multiply numeric property values by 2
-importance: 3
-Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+// Multiply numeric property values by 2
+// importance: 3
+// Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
 
-For instance:
+// For instance:
 
 // before the call
 let menu = {
@@ -70,8 +70,15 @@ let menu = {
   height: 300,
   title: "My menu"
 };
-
+function multiplyNumeric(obj){
+  for(let key in obj){
+    if(typeof(obj[key]=='number')){
+      obj[key]*=2
+    }
+  }
+}
 multiplyNumeric(menu);
+console.log(menu.width)
 
 // after the call
 menu = {
@@ -79,4 +86,4 @@ menu = {
   height: 600,
   title: "My menu"
 };
-Please note that multiplyNumeric does not need to return anything. It should modify the object in-place.
+// Please note that multiplyNumeric does not need to return anything. It should modify the object in-place.
