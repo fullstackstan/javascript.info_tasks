@@ -32,9 +32,13 @@ console.log(styles)
 
 function sumInput(){
     let array = []
-    let usesInput
+    let userInput
     while (true){
         userInput = prompt('please enter a value','Your Value')
-        userInput ?? 'string'
+        if (userInput==='null'||userInput==''||!isFinite(userInput)){
+            break
+        }
+        array.push(+userInput)
     }
+    console.log(array.reduce((a,b)=>a+b))
 };
