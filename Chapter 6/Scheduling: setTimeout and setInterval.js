@@ -23,3 +23,14 @@ function printNumbers(from,to){
 
 }
 printNumbers(5, 10);
+
+function printNumbers(fromm, to){
+    let current=from
+    setTimeout(function count(){
+        alert(current)
+        if (current<to){
+            setTimeout(count,1000)
+        }
+        current++
+    },1000)
+}
