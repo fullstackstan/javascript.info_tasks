@@ -27,3 +27,18 @@ function delay(f, ms){
 }
 let f1000= delay(alert,1000)
 f1000('test')
+
+
+
+
+
+/////////////////////////
+
+
+
+
+
+
+
+
+
